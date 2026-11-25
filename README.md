@@ -4,6 +4,8 @@
 
 默认跟随系统外观，也可以手动切到深色或浅色。深色模式下，课表卡片会保留出勤状态的颜色区分，侧栏的快捷键标签也更容易看清。
 
+如果你觉得好用的话，请留下一个 Star 吧！🌟
+
 ## 安装
 
 1. 在浏览器里安装 [Tampermonkey](https://www.tampermonkey.net/)。
@@ -11,6 +13,8 @@
 3. 打开或刷新 [学校的 ManageBac](https://bnds.managebac.cn/)。
 
 如果 Chrome 或 Edge 提示脚本未获运行权限，可以在浏览器的扩展详情里检查 Tampermonkey 的「允许用户脚本」设置。各版本的入口见 [Tampermonkey 官方说明](https://www.tampermonkey.net/faq.php?locale=en&q=Q209)。
+
+**特别提醒:** 如果你使用的是 Safari 浏览器，那么很抱歉，你可能需要支付一定的价格（美区价格为 US$ 2.99）在 App Store 中购买 Tampermonkey 后才可使用此脚本。但我猜你肯定不愿意，所以还等什么，快换用 Chrome 或 Edge 吧！
 
 ## 切换主题
 
@@ -31,3 +35,5 @@
 ## 致谢
 
 脚本内置 [Dark Reader](https://github.com/darkreader/darkreader) 的动态主题引擎。Dark Reader 的 MIT 许可证随脚本附带。
+
+Made with GPT-6.2 Sol.
