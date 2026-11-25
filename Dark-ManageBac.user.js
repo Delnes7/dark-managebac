@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         北京十一学校 ManageBac 深色模式
 // @namespace    https://bnds.managebac.cn/
-// @version      1.1.1
+// @version      1.1.2
 // @description  为 bnds.managebac.cn 添加深色模式，默认跟随系统，也可在油猴菜单中手动选择。
 // @match        https://bnds.managebac.cn/*
 // @run-at       document-start
@@ -51,16 +51,27 @@
                 --managebac-timetable-tint: 16%;
             }
 
-            :is(.f-badge-key.f-menu__link-hotkey,
-                .f-timetable .f-timetable-item .f-box-item__suffix .f-badge-key) {
-                background-color: color-mix(in srgb, currentColor 22%, #1b222c) !important;
-                box-shadow: inset 0 0 0 1px color-mix(in srgb,
-                    currentColor 52%, #333e4e) !important;
+            .f-badge-key {
+                --managebac-badge-accent: var(--f-badge-key-bg, currentColor);
+                box-shadow: inset 0 0 0 1px var(--managebac-badge-outline) !important;
             }
 
-            :is(.f-badge-key.f-menu__link-hotkey,
-                .f-timetable .f-timetable-item .f-box-item__suffix .f-badge-key)
-            .f-badge-key__label {
+            .badge.color-box-custom {
+                --managebac-badge-accent: var(--darkreader-inline-color,
+                    var(--f-color-box-color, currentColor));
+            }
+
+            html[data-darkreader-scheme="dark"] :is(.f-badge-key, .badge.color-box-custom) {
+                --managebac-badge-outline: color-mix(in srgb,
+                    var(--managebac-badge-accent) 52%, #333e4e);
+                background-color: color-mix(in srgb,
+                    var(--managebac-badge-accent) 22%, #1b222c) !important;
+                border-color: var(--managebac-badge-outline) !important;
+            }
+
+            .f-badge-key__label,
+            html[data-darkreader-scheme="dark"] .badge.color-box-custom,
+            html[data-darkreader-scheme="dark"] .badge.color-box-custom .badge-label {
                 color: #f0f5ff !important;
             }
         `,
